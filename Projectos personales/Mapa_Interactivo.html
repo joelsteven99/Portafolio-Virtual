@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_25530a728f55e8e12d254e9447c1f74c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_25530a728f55e8e12d254e9447c1f74c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_25530a728f55e8e12d254e9447c1f74c = L.map(
+                "map_25530a728f55e8e12d254e9447c1f74c",
+                {
+                    center: [4.7109, -74.0721],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_46561e1bfa40e109cf272539402f6ab3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_46561e1bfa40e109cf272539402f6ab3.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var marker_add7589891b78a8b2d1df1c57ae950f1 = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var icon_ed04b7fa83bff5e75c85ab524eb04450 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "user", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_add7589891b78a8b2d1df1c57ae950f1.setIcon(icon_ed04b7fa83bff5e75c85ab524eb04450);
+        
+    
+        var popup_d89b2a942edf90f1397188f1b69dd1a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d276c040199bef564a7473dcfab383f7 = $(`<div id="html_d276c040199bef564a7473dcfab383f7" style="width: 100.0%; height: 100.0%;">     <h3>Información Enriquecida de Chicago, Illinois, USA</h3>     <p>Chicago, en el lago Michigan de Illinois, se encuentra entre      las ciudades más grandes de los EE.UU. Es famosa por su      arquitectura atrevida y tiene un perfil en el que destacan      rascacielos como el icónico Centro John Hancock, la torre      Willis de 1,451 pies (antigua torre Sears) y Tribune Tower      de estilo neogótico. La ciudad también es famosa por sus      museos, incluido el Instituto de Arte de Chicago con sus      famosas obras impresionistas y posimpresionistas.</p>     <p><a href="https://es.wikipedia.org/wiki/Chicago" target="_blank">Saber mas</a></p>     <iframe width="300" height="200" src="https://youtu.be/r1LNTEgHFMw?si=OgPaK1f-esUn_odM" frameborder="0" allowfullscreen></iframe></p> </div>`)[0];
+                popup_d89b2a942edf90f1397188f1b69dd1a5.setContent(html_d276c040199bef564a7473dcfab383f7);
+            
+        
+
+        marker_add7589891b78a8b2d1df1c57ae950f1.bindPopup(popup_d89b2a942edf90f1397188f1b69dd1a5)
+        ;
+
+        
+    
+    
+            var marker_d5e27dea6ff6ac406fd221e2358915fe = L.marker(
+                [4.7109, -74.0721],
+                {}
+            ).addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var icon_300f26d60aa8b7c8f5035794bf02f2b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d5e27dea6ff6ac406fd221e2358915fe.setIcon(icon_300f26d60aa8b7c8f5035794bf02f2b3);
+        
+    
+        var popup_6055520c1b341c431827d348349fc678 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2018899dfc07038476d6cc1703a0cebd = $(`<div id="html_2018899dfc07038476d6cc1703a0cebd" style="width: 100.0%; height: 100.0%;">     <h3>Información Enriquecida de Bogotá, Colombia</h3>     <p>Bogotá es la extensa capital en altura de Colombia. La      Candelaria, su centro con adoquines, cuenta con sitios      coloniales como el Teatro Colón neoclásico y la Iglesia de      San Francisco del siglo XVII. También alberga museos      populares, incluido el Museo Botero, que exhibe arte de      Fernando Botero, y el Museo del Oro, con piezas de oro      precolombinas..</p>     <iframe width="300" height="200" src="https://youtu.be/r1LNTEgHFMw?si=OgPaK1f-esUn_odM" frameborder="0" allowfullscreen></iframe></p>     <p><a href="https://es.wikipedia.org/wiki/Bogot%C3%A1" target="_blank">Saber mas</a></p> </div>`)[0];
+                popup_6055520c1b341c431827d348349fc678.setContent(html_2018899dfc07038476d6cc1703a0cebd);
+            
+        
+
+        marker_d5e27dea6ff6ac406fd221e2358915fe.bindPopup(popup_6055520c1b341c431827d348349fc678)
+        ;
+
+        
+    
+    
+            var tile_layer_77a7a7f45b646a10a2f988cbeed47b15 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data \u00a9 OpenStreetMap contributors, CC-BY-SA", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_77a7a7f45b646a10a2f988cbeed47b15.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var tile_layer_6c2aa505bf5036193952ac4a513be3b2 = L.tileLayer(
+                "stamentoner",
+                {"attribution": "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6c2aa505bf5036193952ac4a513be3b2.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var tile_layer_ccb11470a0e371e83f7d8624193a03fa = L.tileLayer(
+                "stamenwatercolor",
+                {"attribution": "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ccb11470a0e371e83f7d8624193a03fa.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var tile_layer_fe4e98a30273567e2daff0886a48f095 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_fe4e98a30273567e2daff0886a48f095.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var tile_layer_ae07d86532aef1db62c31192496d64b7 = L.tileLayer(
+                "stamenterrain",
+                {"attribution": "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ae07d86532aef1db62c31192496d64b7.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var tile_layer_8ee13d45f494649bdcc8e248f651f7fe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_8ee13d45f494649bdcc8e248f651f7fe.addTo(map_25530a728f55e8e12d254e9447c1f74c);
+        
+    
+            var layer_control_371022126ea99348b12fcf4cb66cb649_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_46561e1bfa40e109cf272539402f6ab3,
+                    "OpenStreetMap" : tile_layer_77a7a7f45b646a10a2f988cbeed47b15,
+                    "Stamen Toner" : tile_layer_6c2aa505bf5036193952ac4a513be3b2,
+                    "Stamen Watercolor" : tile_layer_ccb11470a0e371e83f7d8624193a03fa,
+                    "CartoDB Positron" : tile_layer_fe4e98a30273567e2daff0886a48f095,
+                    "Stamen Terrain" : tile_layer_ae07d86532aef1db62c31192496d64b7,
+                    "CartoDB Dark Matter" : tile_layer_8ee13d45f494649bdcc8e248f651f7fe,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_371022126ea99348b12fcf4cb66cb649 = L.control.layers(
+                layer_control_371022126ea99348b12fcf4cb66cb649_layers.base_layers,
+                layer_control_371022126ea99348b12fcf4cb66cb649_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_25530a728f55e8e12d254e9447c1f74c);
+
+        
+    
+            var locate_control_8d8e8289ae68029fa355b7fbf20d3674 = L.control.locate(
+                {}
+            ).addTo(map_25530a728f55e8e12d254e9447c1f74c);
+            
+        
+    
+            var tile_layer_70cbe5b3a0b90a51d8259fff22736edc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_13571a6a19c3d56ce99873eef7f0977d = new L.Control.MiniMap(
+                tile_layer_70cbe5b3a0b90a51d8259fff22736edc,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_25530a728f55e8e12d254e9447c1f74c.addControl(mini_map_13571a6a19c3d56ce99873eef7f0977d);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems_draw_control_53431b1ffa4843743068d720851391d8 = new L.featureGroup().addTo(
+                map_25530a728f55e8e12d254e9447c1f74c
+            );
+            options.edit.featureGroup = drawnItems_draw_control_53431b1ffa4843743068d720851391d8;
+            var draw_control_53431b1ffa4843743068d720851391d8 = new L.Control.Draw(
+                options
+            ).addTo( map_25530a728f55e8e12d254e9447c1f74c );
+            map_25530a728f55e8e12d254e9447c1f74c.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_53431b1ffa4843743068d720851391d8.addLayer(layer);
+             });
+            map_25530a728f55e8e12d254e9447c1f74c.on('draw:created', function(e) {
+                drawnItems_draw_control_53431b1ffa4843743068d720851391d8.addLayer(e.layer);
+            });
+            
+        
+    
+            var measure_control_fcbd431e348f86b9810c528d4a9a4063 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_25530a728f55e8e12d254e9447c1f74c.addControl(measure_control_fcbd431e348f86b9810c528d4a9a4063);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+</script>
+</html>
